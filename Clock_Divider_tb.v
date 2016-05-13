@@ -1,10 +1,10 @@
 module Clock_Divider_tb; 
 	reg clk; 
-	reg [7:0] SW; 
-	reg reset_n;
+	reg [9:0] SW; 
+	reg reset;
 	wire outClk; 
 	
-	Clock_Divider dut(clk, SW, outClk, reset_n); 
+	Clock_Divider dut(clk, SW, outClk, reset); 
 	
 	initial begin
 		clk = 0; 
@@ -18,17 +18,17 @@ module Clock_Divider_tb;
 	end 
 		
 	initial begin 
-		reset_n = 1'b0;
+		reset = 1'b1;
 		#1000
-		reset_n = 1'b1;
+		reset = 1'b0;
 		SW = 8'b00000000; 
 		#1000; 
 		SW = 8'b00000010; 
 		#1000; 
 		SW = 8'b00000100; 
-		#20; 
+		#1000; 
 		SW = 8'b00000101;
-		#20; 
+		#1000; 
 		$stop; 
 	end 
 endmodule

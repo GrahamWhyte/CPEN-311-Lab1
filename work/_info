@@ -9,21 +9,21 @@ z2
 cModel Technology
 dC:/altera/14.1
 vClock_Divider
-Z0 !s110 1463092271
+Z0 !s110 1463172100
 !i10b 1
-!s100 kz`NLlF^`1?bkmecfG;dZ0
-In9j3W27ddFnBNUPn8iek33
+!s100 33EEl<MWbYO]S0QiN:`z^2
+I4MLd3IDHVmiF62h`?<z5Z1
 Z1 V`JN@9S9cnhjKRR_L]QIcM3
 Z2 dC:/Users/Graham/Documents/GitHub/CPEN-311-Lab1
-w1463092246
+w1463172096
 8C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/Clock_Divider.v
 FC:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/Clock_Divider.v
 L0 1
-Z3 OV;L;10.3d;59
+Z3 OV;L;10.3c;59
 r1
 !s85 0
 31
-!s108 1463092271.459000
+!s108 1463172100.681000
 !s107 C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/Clock_Divider.v|
 !s90 -reportprogress|300|-work|work|-O0|-stats=none|C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/Clock_Divider.v|
 !s101 -O0
@@ -33,11 +33,11 @@ n@clock_@divider
 vClock_Divider_tb
 R0
 !i10b 1
-!s100 ^PR=fnGBY8XSjbUmB=R311
-ISJ=6<nDkiRRZGmJ@BL_V<2
+!s100 Kh77OjL=ob:i1Fan`^R2]3
+II<_Q3H>6C8eJjm<K82`6b1
 R1
 R2
-w1463092266
+w1463170522
 8C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/Clock_Divider_tb.v
 FC:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/Clock_Divider_tb.v
 L0 1
@@ -45,7 +45,7 @@ R3
 r1
 !s85 0
 31
-!s108 1463092271.509000
+!s108 1463172100.765000
 !s107 C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/Clock_Divider_tb.v|
 !s90 -reportprogress|300|-work|work|-O0|-stats=none|C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/Clock_Divider_tb.v|
 !s101 -O0

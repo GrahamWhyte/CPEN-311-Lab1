@@ -7,17 +7,17 @@ module Clock_Divider(inClk, SW, outClk, reset);
 	reg[31:0] count; 
 	
 	always@(*) begin 
-		casex(SW[3:1])  
+		case(SW[3:1])  
 			//4'bXXX1: countTo = 0;
-			3'b000: countTo = 32'hBAB9;
-			3'b001: countTo = 32'hA65D; 
-			3'b010: countTo = 32'h9430; 
-			3'b011: countTo = 32'h8BE8;
-			3'b100: countTo = 32'h7CB8; 
-			3'b101: countTo = 32'h6EF9;
-			3'b110: countTo = 32'h62F1;
-			3'b111: countTo = 32'h5D5D; 
-			default: countTo = 32'hAAAA; 
+			3'b000: {countTo, count} = {32'hBAB9, 32'd0};
+			3'b001: {countTo, count} = {32'hA65D, 32'd0}; 
+			3'b010: {countTo, count} = {32'h9430, 32'd0}; 
+			3'b011: {countTo, count} = {32'h8BE8, 32'd0};
+			3'b100: {countTo, count} = {32'h7CB8, 32'd0}; 
+			3'b101: {countTo, count} = {32'h6EF9, 32'd0};
+			3'b110: {countTo, count} = {32'h62F1, 32'd0};
+			3'b111: {countTo, count} = {32'h5D5D, 32'd0}; 
+			default: {countTo, count} = {32'hAAAA, 32'd0}; 
 		endcase 
 	end 
 	
