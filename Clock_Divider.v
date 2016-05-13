@@ -1,7 +1,7 @@
-module Clock_Divider(inClk, SW, outClk, reset_n); 
+module Clock_Divider(inClk, SW, outClk, reset); 
 	input inClk; 
 	input[9:0] SW; 
-	input reset_n;
+	input reset;
 	output reg outClk; 
 	reg[31:0] countTo; 
 	reg[31:0] count; 
@@ -22,16 +22,17 @@ module Clock_Divider(inClk, SW, outClk, reset_n);
 	end 
 	
 	always@(posedge inClk) begin 
-		if (~reset_n) begin
+		if (reset) begin
 			count = 0;
 			outClk = 0;
-		end else begin
-		if (count <countTo) begin 
-			count = count + 1; 
+		end 
+		else begin
+			if (count <countTo) begin 
+				count = count + 1; 
 			end 
-		else begin 
-			outClk = ~outClk; 
-			count = 0; 
+			else begin 
+				outClk = ~outClk; 
+				count = 0; 
 			end 
 		end
 	end 
