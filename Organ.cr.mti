@@ -1,0 +1,15 @@
+{C:/Users/Graham/Desktop/CPEN 311/lab1_template_de1soc/Clock_Divider.v} {1 {vlog -work work -stats=none {C:/Users/Graham/Desktop/CPEN 311/lab1_template_de1soc/Clock_Divider.v}
+Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+-- Compiling module Clock_Divider
+
+Top level modules:
+	Clock_Divider
+
+} {} {}} {C:/Users/Graham/Desktop/CPEN 311/lab1_template_de1soc/Clock_Divider_tb.v} {1 {vlog -work work -stats=none {C:/Users/Graham/Desktop/CPEN 311/lab1_template_de1soc/Clock_Divider_tb.v}
+Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+-- Compiling module Clock_Divider_tb
+
+Top level modules:
+	Clock_Divider_tb
+
+} {} {}}

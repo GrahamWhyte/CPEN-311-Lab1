@@ -1,0 +1,8 @@
+C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/Clock_Divider_tb.v {1 {vlog -work work -O0 -stats=none C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/Clock_Divider_tb.v
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module Clock_Divider_tb
+
+Top level modules:
+	Clock_Divider_tb
+
+} {} {}}

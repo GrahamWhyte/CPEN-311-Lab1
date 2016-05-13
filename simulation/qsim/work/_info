@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Graham/Desktop/CPEN 311/lab1_template_de1soc/simulation/qsim
+vBasic_Organ_Solution
+Z1 !s110 1463094223
+!i10b 1
+!s100 kB0l7ojhW<j34g4JIdaVB0
+Ibz_]V;gk1S>iKc_SIWV<z1
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+Z3 dC:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/simulation/qsim
+w1463094219
+8Basic_Organ_Solution.vo
+FBasic_Organ_Solution.vo
+L0 32
+Z4 OV;L;10.3c;59
+r1
+!s85 0
+31
+!s108 1463094220.802000
+!s107 Basic_Organ_Solution.vo|
+!s90 -work|work|Basic_Organ_Solution.vo|
+!i113 1
+Z5 o-work work
+n@basic_@organ_@solution
+vBasic_Organ_Solution_vlg_check_tst
+Z6 !s110 1462917486
+!i10b 1
+!s100 T1DlFAOjjJ9I_X?zo`VaV0
+IkeFKn>f;C2W_kBTb8FTmg3
+R2
+R0
+Z7 w1462917477
+Z8 8lab1.vwf.vt
+Z9 Flab1.vwf.vt
+L0 76
+R4
+r1
+!s85 0
+31
+Z10 !s108 1462917486.040000
+Z11 !s107 lab1.vwf.vt|
+Z12 !s90 -work|work|lab1.vwf.vt|
+!i113 1
+R5
+n@basic_@organ_@solution_vlg_check_tst
+vBasic_Organ_Solution_vlg_sample_tst
+R6
+!i10b 1
+!s100 K=DhQ1Q5?:RTCYT7>ClK[3
+Im?6o83mH278CIU]k_RN^[3
+R2
+R0
+R7
+R8
+R9
+Z13 L0 30
+R4
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 1
+R5
+n@basic_@organ_@solution_vlg_sample_tst
+vBasic_Organ_Solution_vlg_vec_tst
+R1
+!i10b 1
+!s100 jCZa?LJ>2X=d8?[><YL8O1
+IdXn<:j3l2PX5BA6f7JZ[D1
+R2
+R3
+w1463094215
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+R13
+R4
+r1
+!s85 0
+31
+!s108 1463094223.271000
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R5
+n@basic_@organ_@solution_vlg_vec_tst
