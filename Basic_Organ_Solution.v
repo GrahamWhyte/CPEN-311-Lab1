@@ -205,7 +205,7 @@ wire reset = 0; //FOR CLOCK DIVIDER
            
 Clock_Divider Clock_Divider(CLOCK_50, SW, Clock_Divider_Signal, reset);
 
-assign Sample_Clk_Signal = SW[0]? 0:Clock_Divider_Signal; 
+assign Sample_Clk_Signal = SW[0]? Clock_Divider_Signal:0; 
 
 
 
