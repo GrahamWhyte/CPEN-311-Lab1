@@ -207,8 +207,27 @@ Clock_Divider Clock_Divider(CLOCK_50, SW, Clock_Divider_Signal, reset);
 
 assign Sample_Clk_Signal = SW[0]? Clock_Divider_Signal:0; 
 
+//diplay notes on info_channel b
+reg[31:0] display_note;
+wire[31:0] note;
+//Oscilloscope_display(.SW(SW), .note(display_note));
 
 
+always @(*) begin
+	case(SW[3:1])
+		3'b000: display_note = {character_D, character_O, character_space, character_space};
+		3'b001: display_note = {character_R, character_E, character_space, character_space};
+		3'b010: display_note = {character_M, character_I, character_space, character_space};
+		3'b011: display_note = {character_F, character_A, character_space, character_space};
+		3'b100: display_note = {character_S, character_O, character_space, character_space};
+		3'b101: display_note = {character_L, character_A, character_space, character_space};
+		3'b110: display_note = {character_S, character_I, character_space, character_space};
+		3'b111: display_note = {character_D, character_O, character_2, character_space};
+		default: display_note = {character_space, character_space, character_space, character_space};
+		endcase
+end
+
+assign note = display_note;
             
 
 //assign Sample_Clk_Signal = Clock_1KHz;  
@@ -294,14 +313,14 @@ LCD_Scope_Encapsulated_pacoblaze_wrapper LCD_LED_scope(
                      .InA(8'h00),
                           
                      //LCD display information signals
-                         .InfoH({character_A,character_U}),
-                          .InfoG({character_S,character_W}),
-                          .InfoF({character_space,character_A}),
-                          .InfoE({character_N,character_space}),
-                          .InfoD({character_E,character_X}),
-                          .InfoC({character_A,character_M}),
-                          .InfoB({character_P,character_L}),
-                          .InfoA({character_E,character_exclaim}),
+                         .InfoH({character_H,character_E}),
+                          .InfoG({character_L,character_L}),
+                          .InfoF({character_O,character_comma}),
+                          .InfoE({character_space,character_C}),
+                          .InfoD({character_P,character_E}),
+                          .InfoC({character_N,character_space}),
+                          .InfoB({character_G,character_U}),
+                          .InfoA({character_Y,character_S}),
                           
                   //choose to display the values or the oscilloscope
                           .choose_scope_or_LCD(choose_LCD_or_SCOPE),
@@ -312,7 +331,8 @@ LCD_Scope_Encapsulated_pacoblaze_wrapper LCD_LED_scope(
                           
                   //scope information generation
                           .ScopeInfoA({character_1,character_K,character_H,character_lowercase_z}),
-                          .ScopeInfoB({character_S,character_W,character_1,character_space}),
+								  //modified to diplay different notes
+                          .ScopeInfoB(note),
                           
                  //enable_scope is used to freeze the scope just before capturing 
                  //the waveform for display (otherwise the sampling would be unreliable)
