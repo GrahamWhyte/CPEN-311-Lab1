@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Basic_Organ_Solution
-Mon May 16 10:53:32 2016
+Tue May 17 09:52:16 2016
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -88,7 +88,7 @@ agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon May 16 10:53:32 2016      ;
+; Analysis & Synthesis Status     ; Successful - Tue May 17 09:52:16 2016      ;
 ; Quartus II 64-Bit Version       ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                   ; Basic_Organ_Solution                       ;
 ; Top-level Entity Name           ; Basic_Organ_Solution                       ;
@@ -202,92 +202,92 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ; < 0.1%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
+;     Processors 5-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                        ;
-+--------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------+-------------+
-; File Name with User-Entered Path                       ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                          ; Library     ;
-+--------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------+-------------+
-; Clock_Divider.v                                        ; yes             ; User Verilog HDL File                        ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/Clock_Divider.v                                        ;             ;
-; SevenSegmentDisplayDecoder.qxp                         ; yes             ; User File                                    ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/SevenSegmentDisplayDecoder.qxp                         ;             ;
-; speed_reg_control.qxp                                  ; yes             ; User File                                    ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/speed_reg_control.qxp                                  ;             ;
-; var_clk_div32.qxp                                      ; yes             ; User File                                    ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/var_clk_div32.qxp                                      ;             ;
-; to_slow_clk_interface.qxp                              ; yes             ; User File                                    ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/to_slow_clk_interface.qxp                              ;             ;
-; LCD_Scope_Encapsulated_pacoblaze.qxp                   ; yes             ; User File                                    ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/LCD_Scope_Encapsulated_pacoblaze.qxp                   ;             ;
-; audio_controller.qxp                                   ; yes             ; User File                                    ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/audio_controller.qxp                                   ;             ;
-; async_trap_and_reset_gen_1_pulse.qxp                   ; yes             ; User File                                    ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/async_trap_and_reset_gen_1_pulse.qxp                   ;             ;
-; Basic_Organ_Solution.v                                 ; yes             ; User Verilog HDL File                        ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/Basic_Organ_Solution.v                                 ;             ;
-; doublesync.v                                           ; yes             ; Auto-Found Verilog HDL File                  ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/doublesync.v                                           ;             ;
-; generate_arbitrary_divided_clk32.v                     ; yes             ; Auto-Found Verilog HDL File                  ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/generate_arbitrary_divided_clk32.v                     ;             ;
-; scope_capture.v                                        ; yes             ; Auto-Found Verilog HDL File                  ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/scope_capture.v                                        ;             ;
-; lcd_scope_encapsulated_pacoblaze_wrapper.v             ; yes             ; Auto-Found Verilog HDL File                  ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/lcd_scope_encapsulated_pacoblaze_wrapper.v             ;             ;
-; sld_signaltap.vhd                                      ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/sld_signaltap.vhd                                      ;             ;
-; sld_signaltap_impl.vhd                                 ; yes             ; Encrypted Megafunction                       ; c:/altera/14.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                 ;             ;
-; sld_ela_control.vhd                                    ; yes             ; Encrypted Megafunction                       ; c:/altera/14.1/quartus/libraries/megafunctions/sld_ela_control.vhd                                    ;             ;
-; lpm_shiftreg.tdf                                       ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                       ;             ;
-; lpm_constant.inc                                       ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_constant.inc                                       ;             ;
-; dffeea.inc                                             ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/dffeea.inc                                             ;             ;
-; aglobal141.inc                                         ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/aglobal141.inc                                         ;             ;
-; sld_mbpmg.vhd                                          ; yes             ; Encrypted Megafunction                       ; c:/altera/14.1/quartus/libraries/megafunctions/sld_mbpmg.vhd                                          ;             ;
-; sld_ela_trigger_flow_mgr.vhd                           ; yes             ; Encrypted Megafunction                       ; c:/altera/14.1/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                           ;             ;
-; sld_buffer_manager.vhd                                 ; yes             ; Encrypted Megafunction                       ; c:/altera/14.1/quartus/libraries/megafunctions/sld_buffer_manager.vhd                                 ;             ;
-; altsyncram.tdf                                         ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/altsyncram.tdf                                         ;             ;
-; stratix_ram_block.inc                                  ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                  ;             ;
-; lpm_mux.inc                                            ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_mux.inc                                            ;             ;
-; lpm_decode.inc                                         ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_decode.inc                                         ;             ;
-; a_rdenreg.inc                                          ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/a_rdenreg.inc                                          ;             ;
-; altrom.inc                                             ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/altrom.inc                                             ;             ;
-; altram.inc                                             ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/altram.inc                                             ;             ;
-; altdpram.inc                                           ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/altdpram.inc                                           ;             ;
-; db/altsyncram_88e4.tdf                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/db/altsyncram_88e4.tdf                                 ;             ;
-; altdpram.tdf                                           ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/altdpram.tdf                                           ;             ;
-; memmodes.inc                                           ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/others/maxplus2/memmodes.inc                                         ;             ;
-; a_hdffe.inc                                            ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/a_hdffe.inc                                            ;             ;
-; alt_le_rden_reg.inc                                    ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/alt_le_rden_reg.inc                                    ;             ;
-; altsyncram.inc                                         ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/altsyncram.inc                                         ;             ;
-; lpm_mux.tdf                                            ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_mux.tdf                                            ;             ;
-; muxlut.inc                                             ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/muxlut.inc                                             ;             ;
-; bypassff.inc                                           ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/bypassff.inc                                           ;             ;
-; altshift.inc                                           ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/altshift.inc                                           ;             ;
-; db/mux_elc.tdf                                         ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/db/mux_elc.tdf                                         ;             ;
-; lpm_decode.tdf                                         ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_decode.tdf                                         ;             ;
-; declut.inc                                             ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/declut.inc                                             ;             ;
-; lpm_compare.inc                                        ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_compare.inc                                        ;             ;
-; db/decode_vnf.tdf                                      ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/db/decode_vnf.tdf                                      ;             ;
-; lpm_counter.tdf                                        ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_counter.tdf                                        ;             ;
-; lpm_add_sub.inc                                        ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                        ;             ;
-; cmpconst.inc                                           ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/cmpconst.inc                                           ;             ;
-; lpm_counter.inc                                        ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_counter.inc                                        ;             ;
-; alt_counter_stratix.inc                                ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/alt_counter_stratix.inc                                ;             ;
-; db/cntr_qai.tdf                                        ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/db/cntr_qai.tdf                                        ;             ;
-; db/cmpr_h9c.tdf                                        ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/db/cmpr_h9c.tdf                                        ;             ;
-; db/cntr_4vi.tdf                                        ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/db/cntr_4vi.tdf                                        ;             ;
-; db/cntr_09i.tdf                                        ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/db/cntr_09i.tdf                                        ;             ;
-; db/cmpr_c9c.tdf                                        ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/db/cmpr_c9c.tdf                                        ;             ;
-; db/cntr_kri.tdf                                        ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/db/cntr_kri.tdf                                        ;             ;
-; db/cmpr_99c.tdf                                        ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/db/cmpr_99c.tdf                                        ;             ;
-; sld_rom_sr.vhd                                         ; yes             ; Encrypted Megafunction                       ; c:/altera/14.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                         ;             ;
-; sld_hub.vhd                                            ; yes             ; Encrypted Megafunction                       ; c:/altera/14.1/quartus/libraries/megafunctions/sld_hub.vhd                                            ; work        ;
-; db/ip/sld59a4f0a5/alt_sld_fab.v                        ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/db/ip/sld59a4f0a5/alt_sld_fab.v                        ; alt_sld_fab ;
-; db/ip/sld59a4f0a5/submodules/alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/db/ip/sld59a4f0a5/submodules/alt_sld_fab_ident.sv      ; alt_sld_fab ;
-; db/ip/sld59a4f0a5/submodules/alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/db/ip/sld59a4f0a5/submodules/alt_sld_fab_presplit.sv   ; alt_sld_fab ;
-; db/ip/sld59a4f0a5/submodules/alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/db/ip/sld59a4f0a5/submodules/alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
-; db/ip/sld59a4f0a5/submodules/alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/Graham/Documents/GitHub/CPEN-311-Lab1/db/ip/sld59a4f0a5/submodules/alt_sld_fab_splitter.sv   ; alt_sld_fab ;
-; sld_jtag_hub.vhd                                       ; yes             ; Encrypted Megafunction                       ; c:/altera/14.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                       ;             ;
-; ALTERA_lcdscp2.hex.mif                                 ; yes             ; Auto-Found Memory Initialization File        ; ALTERA_lcdscp2.hex.mif                                                                                ;             ;
-+--------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------+-------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                            ;
++--------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                       ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                              ; Library     ;
++--------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------+-------------+
+; Clock_Divider.v                                        ; yes             ; User Verilog HDL File                        ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/Clock_Divider.v                                        ;             ;
+; SevenSegmentDisplayDecoder.qxp                         ; yes             ; User File                                    ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/SevenSegmentDisplayDecoder.qxp                         ;             ;
+; speed_reg_control.qxp                                  ; yes             ; User File                                    ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/speed_reg_control.qxp                                  ;             ;
+; var_clk_div32.qxp                                      ; yes             ; User File                                    ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/var_clk_div32.qxp                                      ;             ;
+; to_slow_clk_interface.qxp                              ; yes             ; User File                                    ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/to_slow_clk_interface.qxp                              ;             ;
+; LCD_Scope_Encapsulated_pacoblaze.qxp                   ; yes             ; User File                                    ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/LCD_Scope_Encapsulated_pacoblaze.qxp                   ;             ;
+; audio_controller.qxp                                   ; yes             ; User File                                    ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/audio_controller.qxp                                   ;             ;
+; async_trap_and_reset_gen_1_pulse.qxp                   ; yes             ; User File                                    ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/async_trap_and_reset_gen_1_pulse.qxp                   ;             ;
+; Basic_Organ_Solution.v                                 ; yes             ; User Verilog HDL File                        ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/Basic_Organ_Solution.v                                 ;             ;
+; doublesync.v                                           ; yes             ; Auto-Found Verilog HDL File                  ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/doublesync.v                                           ;             ;
+; generate_arbitrary_divided_clk32.v                     ; yes             ; Auto-Found Verilog HDL File                  ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/generate_arbitrary_divided_clk32.v                     ;             ;
+; scope_capture.v                                        ; yes             ; Auto-Found Verilog HDL File                  ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/scope_capture.v                                        ;             ;
+; lcd_scope_encapsulated_pacoblaze_wrapper.v             ; yes             ; Auto-Found Verilog HDL File                  ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/lcd_scope_encapsulated_pacoblaze_wrapper.v             ;             ;
+; sld_signaltap.vhd                                      ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/sld_signaltap.vhd                                          ;             ;
+; sld_signaltap_impl.vhd                                 ; yes             ; Encrypted Megafunction                       ; c:/altera/14.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                     ;             ;
+; sld_ela_control.vhd                                    ; yes             ; Encrypted Megafunction                       ; c:/altera/14.1/quartus/libraries/megafunctions/sld_ela_control.vhd                                        ;             ;
+; lpm_shiftreg.tdf                                       ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                           ;             ;
+; lpm_constant.inc                                       ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_constant.inc                                           ;             ;
+; dffeea.inc                                             ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/dffeea.inc                                                 ;             ;
+; aglobal141.inc                                         ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/aglobal141.inc                                             ;             ;
+; sld_mbpmg.vhd                                          ; yes             ; Encrypted Megafunction                       ; c:/altera/14.1/quartus/libraries/megafunctions/sld_mbpmg.vhd                                              ;             ;
+; sld_ela_trigger_flow_mgr.vhd                           ; yes             ; Encrypted Megafunction                       ; c:/altera/14.1/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                               ;             ;
+; sld_buffer_manager.vhd                                 ; yes             ; Encrypted Megafunction                       ; c:/altera/14.1/quartus/libraries/megafunctions/sld_buffer_manager.vhd                                     ;             ;
+; altsyncram.tdf                                         ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/altsyncram.tdf                                             ;             ;
+; stratix_ram_block.inc                                  ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                      ;             ;
+; lpm_mux.inc                                            ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_mux.inc                                                ;             ;
+; lpm_decode.inc                                         ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_decode.inc                                             ;             ;
+; a_rdenreg.inc                                          ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/a_rdenreg.inc                                              ;             ;
+; altrom.inc                                             ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/altrom.inc                                                 ;             ;
+; altram.inc                                             ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/altram.inc                                                 ;             ;
+; altdpram.inc                                           ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/altdpram.inc                                               ;             ;
+; db/altsyncram_88e4.tdf                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/db/altsyncram_88e4.tdf                                 ;             ;
+; altdpram.tdf                                           ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/altdpram.tdf                                               ;             ;
+; memmodes.inc                                           ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/others/maxplus2/memmodes.inc                                             ;             ;
+; a_hdffe.inc                                            ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/a_hdffe.inc                                                ;             ;
+; alt_le_rden_reg.inc                                    ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/alt_le_rden_reg.inc                                        ;             ;
+; altsyncram.inc                                         ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/altsyncram.inc                                             ;             ;
+; lpm_mux.tdf                                            ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_mux.tdf                                                ;             ;
+; muxlut.inc                                             ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/muxlut.inc                                                 ;             ;
+; bypassff.inc                                           ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/bypassff.inc                                               ;             ;
+; altshift.inc                                           ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/altshift.inc                                               ;             ;
+; db/mux_elc.tdf                                         ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/db/mux_elc.tdf                                         ;             ;
+; lpm_decode.tdf                                         ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_decode.tdf                                             ;             ;
+; declut.inc                                             ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/declut.inc                                                 ;             ;
+; lpm_compare.inc                                        ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_compare.inc                                            ;             ;
+; db/decode_vnf.tdf                                      ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/db/decode_vnf.tdf                                      ;             ;
+; lpm_counter.tdf                                        ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_counter.tdf                                            ;             ;
+; lpm_add_sub.inc                                        ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                            ;             ;
+; cmpconst.inc                                           ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/cmpconst.inc                                               ;             ;
+; lpm_counter.inc                                        ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_counter.inc                                            ;             ;
+; alt_counter_stratix.inc                                ; yes             ; Megafunction                                 ; c:/altera/14.1/quartus/libraries/megafunctions/alt_counter_stratix.inc                                    ;             ;
+; db/cntr_qai.tdf                                        ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/db/cntr_qai.tdf                                        ;             ;
+; db/cmpr_h9c.tdf                                        ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/db/cmpr_h9c.tdf                                        ;             ;
+; db/cntr_4vi.tdf                                        ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/db/cntr_4vi.tdf                                        ;             ;
+; db/cntr_09i.tdf                                        ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/db/cntr_09i.tdf                                        ;             ;
+; db/cmpr_c9c.tdf                                        ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/db/cmpr_c9c.tdf                                        ;             ;
+; db/cntr_kri.tdf                                        ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/db/cntr_kri.tdf                                        ;             ;
+; db/cmpr_99c.tdf                                        ; yes             ; Auto-Generated Megafunction                  ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/db/cmpr_99c.tdf                                        ;             ;
+; sld_rom_sr.vhd                                         ; yes             ; Encrypted Megafunction                       ; c:/altera/14.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                             ;             ;
+; sld_hub.vhd                                            ; yes             ; Encrypted Megafunction                       ; c:/altera/14.1/quartus/libraries/megafunctions/sld_hub.vhd                                                ; work        ;
+; db/ip/sld59a4f0a5/alt_sld_fab.v                        ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/db/ip/sld59a4f0a5/alt_sld_fab.v                        ; alt_sld_fab ;
+; db/ip/sld59a4f0a5/submodules/alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/db/ip/sld59a4f0a5/submodules/alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sld59a4f0a5/submodules/alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/db/ip/sld59a4f0a5/submodules/alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sld59a4f0a5/submodules/alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/db/ip/sld59a4f0a5/submodules/alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sld59a4f0a5/submodules/alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/db/ip/sld59a4f0a5/submodules/alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                       ; yes             ; Encrypted Megafunction                       ; c:/altera/14.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                           ;             ;
+; ALTERA_lcdscp2.hex.mif                                 ; yes             ; Auto-Found Memory Initialization File        ; ALTERA_lcdscp2.hex.mif                                                                                    ;             ;
++--------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------+-------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------+
@@ -3370,8 +3370,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------+--------------+
 ; Partition Name   ; Elapsed Time ;
 +------------------+--------------+
-; Top              ; 00:00:03     ;
-; sld_hub:auto_hub ; 00:00:01     ;
+; Top              ; 00:00:01     ;
+; sld_hub:auto_hub ; 00:00:00     ;
 +------------------+--------------+
 
 
@@ -4002,9 +4002,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Mon May 16 10:52:46 2016
+    Info: Processing started: Tue May 17 09:51:44 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Basic_Organ_Solution -c Basic_Organ_Solution
-Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file clock_divider.v
     Info (12023): Found entity 1: Clock_Divider
 Info (12021): Found 1 design units, including 1 entities, in source file sevensegmentdisplaydecoder.qxp
@@ -4258,9 +4258,9 @@ Info (21057): Implemented 6953 device resources after synthesis - the final reso
     Info (21061): Implemented 6493 logic cells
     Info (21064): Implemented 308 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 117 warnings
-    Info: Peak virtual memory: 838 megabytes
-    Info: Processing ended: Mon May 16 10:53:32 2016
-    Info: Elapsed time: 00:00:46
-    Info: Total CPU time (on all processors): 00:01:08
+    Info: Peak virtual memory: 846 megabytes
+    Info: Processing ended: Tue May 17 09:52:16 2016
+    Info: Elapsed time: 00:00:32
+    Info: Total CPU time (on all processors): 00:01:02
 
 
