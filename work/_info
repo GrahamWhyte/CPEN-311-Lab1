@@ -52,3 +52,64 @@ r1
 !i113 1
 R4
 n@clock_@divider_tb
+vclock_tb
+Z5 !s110 1463522534
+!i10b 1
+!s100 ?m>jG^og=@hQ<A:bcKEeI0
+I=WMaQ3kLELPVSi_:5hB:>0
+R1
+Z6 dC:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1
+w1463520124
+8C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/one_hertz_clock_tb.v
+FC:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/one_hertz_clock_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1463522534.191000
+!s107 C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/one_hertz_clock_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/one_hertz_clock_tb.v|
+!i113 1
+Z7 o-work work
+vone_hertz_clock
+R5
+!i10b 1
+!s100 f;RgEi:NOXFOn>ln9jMe:1
+IOfgMPF[J2cdUnSjU1^a`l2
+R1
+R6
+w1463522527
+Z8 8C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/one_hertz_clock.v
+Z9 FC:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/one_hertz_clock.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1463522534.129000
+Z10 !s107 C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/one_hertz_clock.v|
+Z11 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/one_hertz_clock.v|
+!i113 1
+R7
+vvDFF
+!s110 1463521011
+!i10b 1
+!s100 87<E;lD1482Vh=0VXld1c0
+I94>_dG`W[QaVkF9A9E=dC0
+R1
+R6
+w1463521007
+R8
+R9
+L0 32
+R3
+r1
+!s85 0
+31
+!s108 1463521011.933000
+R10
+R11
+!i113 1
+R7
+nv@d@f@f
