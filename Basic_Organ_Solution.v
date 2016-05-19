@@ -202,14 +202,99 @@ wire reset = 0; //FOR CLOCK DIVIDER
 // Insert your code for Lab1 here!
 //
 //
-           
-Clock_Divider Clock_Divider(CLOCK_50, SW, Clock_Divider_Signal, reset);
+
+
+//Part A: Frequency Divider 
+
+reg [31:0] countTo; 
+
+always@(*) begin 
+	case(SW[3:1])  
+		3'b000: countTo = 32'hBAB9;
+		3'b001: countTo = 32'hA65D; 
+		3'b010: countTo = 32'h9430; 
+		3'b011: countTo = 32'h8BE8;
+		3'b100: countTo = 32'h7CB8; 
+		3'b101: countTo = 32'h6EF9;
+		3'b110: countTo = 32'h62F1;
+		3'b111: countTo = 32'h5D5D; 
+		default: countTo = 32'hAAAA; 
+	endcase 
+end           
+    
+Clock_Divider Clock_Divider(CLOCK_50, Clock_Divider_Signal, reset, countTo);
+
+
+//Part B: Turn on and off audio with SW[0] 
 
 assign Sample_Clk_Signal = SW[0]? Clock_Divider_Signal:0; 
 
+//Part C: Display notes on info_channel b
+reg[31:0] display_note;
+wire[31:0] note;
+//Oscilloscope_display(.SW(SW), .note(display_note));
 
 
-            
+always @(*) begin
+	case(SW[3:1])
+		3'b000: display_note = {character_D, character_O, character_space, character_space};
+		3'b001: display_note = {character_R, character_E, character_space, character_space};
+		3'b010: display_note = {character_M, character_I, character_space, character_space};
+		3'b011: display_note = {character_F, character_A, character_space, character_space};
+		3'b100: display_note = {character_S, character_O, character_space, character_space};
+		3'b101: display_note = {character_L, character_A, character_space, character_space};
+		3'b110: display_note = {character_S, character_I, character_space, character_space};
+		3'b111: display_note = {character_D, character_O, character_2, character_space};
+		default: display_note = {character_space, character_space, character_space, character_space};
+		endcase
+end
+
+assign note = display_note;
+
+//Part D: Display switches and frequency on LCD
+reg[3:0] Switch1;
+reg[3:0] Switch2;
+reg[3:0] Switch3;
+reg[3:0] Freq0;
+reg[3:0] Freq1;
+reg[3:0] Freq2;
+reg[3:0] Freq3;
+
+always @(*) begin
+	case(SW[3:1])
+		3'b000: {Switch1, Switch2, Switch3} = 12'h000;
+		3'b001: {Switch1, Switch2, Switch3} = 12'h001;
+		3'b010: {Switch1, Switch2, Switch3} = 12'h010;
+		3'b011: {Switch1, Switch2, Switch3} = 12'h011;
+		3'b100: {Switch1, Switch2, Switch3} = 12'h100;
+		3'b101: {Switch1, Switch2, Switch3} = 12'h101;
+		3'b110: {Switch1, Switch2, Switch3} = 12'h110;
+		3'b111: {Switch1, Switch2, Switch3} = 12'h111;
+		default: {Switch1, Switch2, Switch3} = 12'h000;
+		endcase
+end
+
+always @(*) begin
+	case(SW[3:1])
+		3'b000: {Freq3, Freq2, Freq1, Freq0} = 16'h523; 
+		3'b001: {Freq3, Freq2, Freq1, Freq0} = 16'h587;
+		3'b010: {Freq3, Freq2, Freq1, Freq0} = 16'h659;
+		3'b011: {Freq3, Freq2, Freq1, Freq0} = 16'h698;
+		3'b100: {Freq3, Freq2, Freq1, Freq0} = 16'h783;
+		3'b101: {Freq3, Freq2, Freq1, Freq0} = 16'h880;
+		3'b110: {Freq3, Freq2, Freq1, Freq0} = 16'h987;
+		3'b111: {Freq3, Freq2, Freq1, Freq0} = 16'h1046; 
+		default: {Freq3, Freq2, Freq1, Freq0} = 16'hAAAA;
+	endcase
+end
+
+//Part E: 1Hz LEDs  
+wire one_hz;
+
+Clock_Divider led_clock(CLOCK_50, one_hz, reset, 32'h17d7840); 
+
+one_hertz_clock counting_clock(one_hz, LED[7:0]);
+
 
 //assign Sample_Clk_Signal = Clock_1KHz;  
 
@@ -255,8 +340,8 @@ Generate_LCD_scope_Clk(
 (* keep = 1, preserve = 1 *) logic ScopeChannelASignal;
 (* keep = 1, preserve = 1 *) logic ScopeChannelBSignal;
 
-assign ScopeChannelASignal = Sample_Clk_Signal;
-assign ScopeChannelBSignal = SW[1];
+assign ScopeChannelASignal = SW[1];
+assign ScopeChannelBSignal = Sample_Clk_Signal;
 
 scope_capture LCD_scope_channelA(
 .clk(scope_clk),
@@ -284,24 +369,24 @@ LCD_Scope_Encapsulated_pacoblaze_wrapper LCD_LED_scope(
                     .clk(CLK_50M),  //don't touch
                           
                         //LCD Display values
-                      .InH(8'hAA),
-                      .InG(8'hBB),
-                      .InF(8'h01),
-                       .InE(8'h23),
-                      .InD(8'h45),
-                      .InC(8'h67),
-                      .InB(8'h89),
+                      .InH({Switch1,Switch2}),
+                      .InG({Switch3,Freq3}),
+                      .InF({Freq2, Freq1}),
+                       .InE({Freq0,4'h0}),
+                      .InD(8'h00),
+                      .InC(8'h00),
+                      .InB(8'h00),
                      .InA(8'h00),
                           
                      //LCD display information signals
-                         .InfoH({character_A,character_U}),
-                          .InfoG({character_S,character_W}),
-                          .InfoF({character_space,character_A}),
-                          .InfoE({character_N,character_space}),
-                          .InfoD({character_E,character_X}),
-                          .InfoC({character_A,character_M}),
-                          .InfoB({character_P,character_L}),
-                          .InfoA({character_E,character_exclaim}),
+                         .InfoH({character_H,character_E}),
+                          .InfoG({character_L,character_L}),
+                          .InfoF({character_O,character_comma}),
+                          .InfoE({character_space,character_C}),
+                          .InfoD({character_P,character_E}),
+                          .InfoC({character_N,character_space}),
+                          .InfoB({character_G,character_U}),
+                          .InfoA({character_Y,character_S}),
                           
                   //choose to display the values or the oscilloscope
                           .choose_scope_or_LCD(choose_LCD_or_SCOPE),
@@ -312,7 +397,8 @@ LCD_Scope_Encapsulated_pacoblaze_wrapper LCD_LED_scope(
                           
                   //scope information generation
                           .ScopeInfoA({character_1,character_K,character_H,character_lowercase_z}),
-                          .ScopeInfoB({character_S,character_W,character_1,character_space}),
+								  //modified to diplay different notes
+                          .ScopeInfoB(note),
                           
                  //enable_scope is used to freeze the scope just before capturing 
                  //the waveform for display (otherwise the sampling would be unreliable)
