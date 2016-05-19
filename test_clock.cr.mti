@@ -1,0 +1,8 @@
+C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/one_hertz_clock_tb.v {1 {vlog -work work -stats=none C:/Users/Xingyu/Desktop/CPEN311/lab1/CPEN-311-Lab1/one_hertz_clock_tb.v
+Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+-- Compiling module clock_tb
+
+Top level modules:
+	clock_tb
+
+} {} {}}

@@ -228,7 +228,58 @@ always @(*) begin
 end
 
 assign note = display_note;
-            
+
+//lcd info
+reg[3:0] Switch1;
+reg[3:0] Switch2;
+reg[3:0] Switch3;
+reg[3:0] Freq0;
+reg[3:0] Freq1;
+reg[3:0] Freq2;
+reg[3:0] Freq3;
+
+always @(*) begin
+	case(SW[3:1])
+		3'b000: {Switch1, Switch2, Switch3} = 12'h000;
+		3'b001: {Switch1, Switch2, Switch3} = 12'h001;
+		3'b010: {Switch1, Switch2, Switch3} = 12'h010;
+		3'b011: {Switch1, Switch2, Switch3} = 12'h011;
+		3'b100: {Switch1, Switch2, Switch3} = 12'h100;
+		3'b101: {Switch1, Switch2, Switch3} = 12'h101;
+		3'b110: {Switch1, Switch2, Switch3} = 12'h110;
+		3'b111: {Switch1, Switch2, Switch3} = 12'h111;
+		default: {Switch1, Switch2, Switch3} = 12'h000;
+		endcase
+end
+
+always @(*) begin
+	case(SW[3:1])
+		3'b000: {Freq3, Freq2, Freq1, Freq0} = 16'hBAB9;
+		3'b001: {Freq3, Freq2, Freq1, Freq0} = 16'hA65D;
+		3'b010: {Freq3, Freq2, Freq1, Freq0} = 16'h9430;
+		3'b011: {Freq3, Freq2, Freq1, Freq0} = 16'h8BE8;
+		3'b100: {Freq3, Freq2, Freq1, Freq0} = 16'h7CB8;
+		3'b101: {Freq3, Freq2, Freq1, Freq0} = 16'h6EF9;
+		3'b110: {Freq3, Freq2, Freq1, Freq0} = 16'h62F1;
+		3'b111: {Freq3, Freq2, Freq1, Freq0} = 16'h5D5D; 
+		default: {Freq3, Freq2, Freq1, Freq0} = 16'hAAAA;
+		endcase
+end
+
+//one hertz 
+wire one_hz;
+
+Generate_Arbitrary_Divided_Clk32 
+one_hertz(
+.inclk(CLK_50M),
+.outclk(one_hz),
+.outclk_Not(),
+.div_clk_count(32'h17d7840),
+.Reset(1'h1));
+
+one_hertz_clock
+counting_clock(one_hz, LED[7:0]);
+
 
 //assign Sample_Clk_Signal = Clock_1KHz;  
 
@@ -274,8 +325,8 @@ Generate_LCD_scope_Clk(
 (* keep = 1, preserve = 1 *) logic ScopeChannelASignal;
 (* keep = 1, preserve = 1 *) logic ScopeChannelBSignal;
 
-assign ScopeChannelASignal = Sample_Clk_Signal;
-assign ScopeChannelBSignal = SW[1];
+assign ScopeChannelASignal = SW[1];
+assign ScopeChannelBSignal = Sample_Clk_Signal;
 
 scope_capture LCD_scope_channelA(
 .clk(scope_clk),
@@ -303,13 +354,13 @@ LCD_Scope_Encapsulated_pacoblaze_wrapper LCD_LED_scope(
                     .clk(CLK_50M),  //don't touch
                           
                         //LCD Display values
-                      .InH(8'hAA),
-                      .InG(8'hBB),
-                      .InF(8'h01),
-                       .InE(8'h23),
-                      .InD(8'h45),
-                      .InC(8'h67),
-                      .InB(8'h89),
+                      .InH({Switch1,Switch2}),
+                      .InG({Switch3,Freq3}),
+                      .InF({Freq2, Freq1}),
+                       .InE({Freq0,4'h0}),
+                      .InD(8'h00),
+                      .InC(8'h00),
+                      .InB(8'h00),
                      .InA(8'h00),
                           
                      //LCD display information signals

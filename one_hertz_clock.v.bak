@@ -1,0 +1,12 @@
+module one_hertz_clock(one_hertz_clock, LEDR);
+	input one_hertz_clock;
+	output [7:0] LEDR = 8'b00000001;
+
+
+
+always @(poseedge one_hertz_clock) begin
+	LEDR = LEDR << 1;
+	
+	
+	end
+endmodule

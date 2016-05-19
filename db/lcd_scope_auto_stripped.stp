@@ -1019,7 +1019,7 @@
               <node data_index="71" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="LCD_Scope_Encapsulated_pacoblaze_wrapper:LCD_LED_scope|InfoA[1]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="71" tap_mode="classic" trigger_index="71" type="unknown"/>
               <node data_index="64" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="LCD_Scope_Encapsulated_pacoblaze_wrapper:LCD_LED_scope|InfoA[0]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="64" tap_mode="classic" trigger_index="64" type="unknown"/>
             </node>
-            <node is_selected="false" level-0="alt_or" name="Line 2 - HEX" order="msb_to_lsb" storage-0="alt_or" storage-1="alt_or" storage-2="alt_or" type="unknown">
+            <node is_selected="true" level-0="alt_or" name="Line 2 - HEX" order="msb_to_lsb" storage-0="alt_or" storage-1="alt_or" storage-2="alt_or" type="unknown">
               <node data_index="63" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="LCD_Scope_Encapsulated_pacoblaze_wrapper:LCD_LED_scope|InH[7]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="63" tap_mode="classic" trigger_index="63" type="unknown"/>
               <node data_index="62" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="LCD_Scope_Encapsulated_pacoblaze_wrapper:LCD_LED_scope|InH[6]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="62" tap_mode="classic" trigger_index="62" type="unknown"/>
               <node data_index="61" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="LCD_Scope_Encapsulated_pacoblaze_wrapper:LCD_LED_scope|InH[5]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="61" tap_mode="classic" trigger_index="61" type="unknown"/>
@@ -1826,14 +1826,14 @@
     </signal_set>
     <position_info>
       <single attribute="active tab" value="0"/>
-      <single attribute="data horizontal scroll position" value="0"/>
+      <single attribute="data horizontal scroll position" value="29"/>
       <single attribute="data vertical scroll position" value="0"/>
       <single attribute="setup horizontal scroll position" value="0"/>
       <single attribute="setup vertical scroll position" value="0"/>
       <single attribute="zoom level denominator" value="1"/>
-      <single attribute="zoom level numerator" value="1"/>
+      <single attribute="zoom level numerator" value="2"/>
       <single attribute="zoom offset denominator" value="1"/>
-      <single attribute="zoom offset numerator" value="130944"/>
+      <single attribute="zoom offset numerator" value="65472"/>
     </position_info>
   </instance>
   <mnemonics/>
@@ -1849,7 +1849,7 @@
     <single attribute="lock mode" value="0"/>
     <single attribute="sof manager visible" value="1"/>
     <multi attribute="column width" size="23" value="34,34,272,74,68,78,95,96,98,98,88,88,110,101,101,101,101,101,101,101,101,107,78"/>
-    <multi attribute="frame size" size="2" value="1600,1201"/>
+    <multi attribute="frame size" size="2" value="1920,1001"/>
     <multi attribute="jtag widget size" size="2" value="334,224"/>
   </global_info>
 </session>

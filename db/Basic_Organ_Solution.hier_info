@@ -1,13 +1,13 @@
 |Basic_Organ_Solution
-CLOCK_50 => CLK_50M.IN13
-LEDR[0] <= <GND>
-LEDR[1] <= <GND>
-LEDR[2] <= <GND>
-LEDR[3] <= <GND>
-LEDR[4] <= <GND>
-LEDR[5] <= <GND>
-LEDR[6] <= <GND>
-LEDR[7] <= <GND>
+CLOCK_50 => CLK_50M.IN14
+LEDR[0] <= one_hertz_clock:counting_clock.port1
+LEDR[1] <= one_hertz_clock:counting_clock.port1
+LEDR[2] <= one_hertz_clock:counting_clock.port1
+LEDR[3] <= one_hertz_clock:counting_clock.port1
+LEDR[4] <= one_hertz_clock:counting_clock.port1
+LEDR[5] <= one_hertz_clock:counting_clock.port1
+LEDR[6] <= one_hertz_clock:counting_clock.port1
+LEDR[7] <= one_hertz_clock:counting_clock.port1
 LEDR[8] <= <GND>
 LEDR[9] <= <GND>
 KEY[0] => _.IN1
@@ -230,6 +230,104 @@ reset => count.OUTPUTSELECT
 reset => count.OUTPUTSELECT
 reset => count.OUTPUTSELECT
 reset => outClk.OUTPUTSELECT
+
+
+|Basic_Organ_Solution|Generate_Arbitrary_Divided_Clk32:one_hertz
+inclk => inclk.IN1
+outclk <= var_clk_div32:Div_Clk.outclk
+outclk_Not <= var_clk_div32:Div_Clk.outclk_not
+div_clk_count[0] => div_clk_count[0].IN1
+div_clk_count[1] => div_clk_count[1].IN1
+div_clk_count[2] => div_clk_count[2].IN1
+div_clk_count[3] => div_clk_count[3].IN1
+div_clk_count[4] => div_clk_count[4].IN1
+div_clk_count[5] => div_clk_count[5].IN1
+div_clk_count[6] => div_clk_count[6].IN1
+div_clk_count[7] => div_clk_count[7].IN1
+div_clk_count[8] => div_clk_count[8].IN1
+div_clk_count[9] => div_clk_count[9].IN1
+div_clk_count[10] => div_clk_count[10].IN1
+div_clk_count[11] => div_clk_count[11].IN1
+div_clk_count[12] => div_clk_count[12].IN1
+div_clk_count[13] => div_clk_count[13].IN1
+div_clk_count[14] => div_clk_count[14].IN1
+div_clk_count[15] => div_clk_count[15].IN1
+div_clk_count[16] => div_clk_count[16].IN1
+div_clk_count[17] => div_clk_count[17].IN1
+div_clk_count[18] => div_clk_count[18].IN1
+div_clk_count[19] => div_clk_count[19].IN1
+div_clk_count[20] => div_clk_count[20].IN1
+div_clk_count[21] => div_clk_count[21].IN1
+div_clk_count[22] => div_clk_count[22].IN1
+div_clk_count[23] => div_clk_count[23].IN1
+div_clk_count[24] => div_clk_count[24].IN1
+div_clk_count[25] => div_clk_count[25].IN1
+div_clk_count[26] => div_clk_count[26].IN1
+div_clk_count[27] => div_clk_count[27].IN1
+div_clk_count[28] => div_clk_count[28].IN1
+div_clk_count[29] => div_clk_count[29].IN1
+div_clk_count[30] => div_clk_count[30].IN1
+div_clk_count[31] => div_clk_count[31].IN1
+Reset => Reset.IN1
+
+
+|Basic_Organ_Solution|Generate_Arbitrary_Divided_Clk32:one_hertz|var_clk_div32:Div_Clk
+inclk => ~NO_FANOUT~
+outclk <= <GND>
+outclk_not <= <GND>
+clk_count[0] => ~NO_FANOUT~
+clk_count[1] => ~NO_FANOUT~
+clk_count[2] => ~NO_FANOUT~
+clk_count[3] => ~NO_FANOUT~
+clk_count[4] => ~NO_FANOUT~
+clk_count[5] => ~NO_FANOUT~
+clk_count[6] => ~NO_FANOUT~
+clk_count[7] => ~NO_FANOUT~
+clk_count[8] => ~NO_FANOUT~
+clk_count[9] => ~NO_FANOUT~
+clk_count[10] => ~NO_FANOUT~
+clk_count[11] => ~NO_FANOUT~
+clk_count[12] => ~NO_FANOUT~
+clk_count[13] => ~NO_FANOUT~
+clk_count[14] => ~NO_FANOUT~
+clk_count[15] => ~NO_FANOUT~
+clk_count[16] => ~NO_FANOUT~
+clk_count[17] => ~NO_FANOUT~
+clk_count[18] => ~NO_FANOUT~
+clk_count[19] => ~NO_FANOUT~
+clk_count[20] => ~NO_FANOUT~
+clk_count[21] => ~NO_FANOUT~
+clk_count[22] => ~NO_FANOUT~
+clk_count[23] => ~NO_FANOUT~
+clk_count[24] => ~NO_FANOUT~
+clk_count[25] => ~NO_FANOUT~
+clk_count[26] => ~NO_FANOUT~
+clk_count[27] => ~NO_FANOUT~
+clk_count[28] => ~NO_FANOUT~
+clk_count[29] => ~NO_FANOUT~
+clk_count[30] => ~NO_FANOUT~
+clk_count[31] => ~NO_FANOUT~
+Reset => ~NO_FANOUT~
+
+
+|Basic_Organ_Solution|one_hertz_clock:counting_clock
+one_hertz_clock => flag.CLK
+one_hertz_clock => LEDR[0]~reg0.CLK
+one_hertz_clock => LEDR[1]~reg0.CLK
+one_hertz_clock => LEDR[2]~reg0.CLK
+one_hertz_clock => LEDR[3]~reg0.CLK
+one_hertz_clock => LEDR[4]~reg0.CLK
+one_hertz_clock => LEDR[5]~reg0.CLK
+one_hertz_clock => LEDR[6]~reg0.CLK
+one_hertz_clock => LEDR[7]~reg0.CLK
+LEDR[0] <= LEDR[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= LEDR[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= LEDR[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= LEDR[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] <= LEDR[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] <= LEDR[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] <= LEDR[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[7] <= LEDR[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Basic_Organ_Solution|doublesync:user_scope_enable_sync1
