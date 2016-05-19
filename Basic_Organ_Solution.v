@@ -203,7 +203,7 @@ wire reset = 0; //FOR CLOCK DIVIDER
 //
 //
 
-<<<<<<< HEAD
+
 
 //Part A: Frequency Divider 
 
@@ -295,85 +295,7 @@ wire one_hz;
 Clock_Divider led_clock(CLOCK_50, one_hz, reset, 32'h17d7840); 
 
 one_hertz_clock counting_clock(one_hz, LED[7:0]);
-=======
-assign Sample_Clk_Signal = SW[0]? Clock_Divider_Signal:0; 
 
-//diplay notes on info_channel b
-reg[31:0] display_note;
-wire[31:0] note;
-//Oscilloscope_display(.SW(SW), .note(display_note));
-
-
-always @(*) begin
-	case(SW[3:1])
-		3'b000: display_note = {character_D, character_O, character_space, character_space};
-		3'b001: display_note = {character_R, character_E, character_space, character_space};
-		3'b010: display_note = {character_M, character_I, character_space, character_space};
-		3'b011: display_note = {character_F, character_A, character_space, character_space};
-		3'b100: display_note = {character_S, character_O, character_space, character_space};
-		3'b101: display_note = {character_L, character_A, character_space, character_space};
-		3'b110: display_note = {character_S, character_I, character_space, character_space};
-		3'b111: display_note = {character_D, character_O, character_2, character_space};
-		default: display_note = {character_space, character_space, character_space, character_space};
-		endcase
-end
-
-assign note = display_note;
-
-//lcd info
-reg[3:0] Switch1;
-reg[3:0] Switch2;
-reg[3:0] Switch3;
-reg[3:0] Freq0;
-reg[3:0] Freq1;
-reg[3:0] Freq2;
-reg[3:0] Freq3;
-
-always @(*) begin
-	case(SW[3:1])
-		3'b000: {Switch1, Switch2, Switch3} = 12'h000;
-		3'b001: {Switch1, Switch2, Switch3} = 12'h001;
-		3'b010: {Switch1, Switch2, Switch3} = 12'h010;
-		3'b011: {Switch1, Switch2, Switch3} = 12'h011;
-		3'b100: {Switch1, Switch2, Switch3} = 12'h100;
-		3'b101: {Switch1, Switch2, Switch3} = 12'h101;
-		3'b110: {Switch1, Switch2, Switch3} = 12'h110;
-		3'b111: {Switch1, Switch2, Switch3} = 12'h111;
-		default: {Switch1, Switch2, Switch3} = 12'h000;
-		endcase
-end
-
-always @(*) begin
-	case(SW[3:1])
-		3'b000: {Freq3, Freq2, Freq1, Freq0} = 16'hBAB9;
-		3'b001: {Freq3, Freq2, Freq1, Freq0} = 16'hA65D;
-		3'b010: {Freq3, Freq2, Freq1, Freq0} = 16'h9430;
-		3'b011: {Freq3, Freq2, Freq1, Freq0} = 16'h8BE8;
-		3'b100: {Freq3, Freq2, Freq1, Freq0} = 16'h7CB8;
-		3'b101: {Freq3, Freq2, Freq1, Freq0} = 16'h6EF9;
-		3'b110: {Freq3, Freq2, Freq1, Freq0} = 16'h62F1;
-		3'b111: {Freq3, Freq2, Freq1, Freq0} = 16'h5D5D; 
-		default: {Freq3, Freq2, Freq1, Freq0} = 16'hAAAA;
-		endcase
-end
-
-//one hertz 
-wire one_hz;
-
-Generate_Arbitrary_Divided_Clk32 
-one_hertz(
-.inclk(CLK_50M),
-.outclk(one_hz),
-.outclk_Not(),
-.div_clk_count(32'h17d7840),
-.Reset(1'h1));
-
-one_hertz_clock
-counting_clock(one_hz, LED[7:0]);
->>>>>>> be31a4838690526bbf0bce96cb9363c33748fc3f
-
-
-//assign Sample_Clk_Signal = Clock_1KHz;  
 
 //Audio Generation Signal
 //Note that the audio needs signed data - so convert 1 bit to 8 bits signed
