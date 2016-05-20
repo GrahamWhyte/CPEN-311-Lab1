@@ -297,6 +297,9 @@ Clock_Divider led_clock(CLOCK_50, one_hz, reset, 32'h17d7840);
 one_hertz_clock counting_clock(one_hz, LED[7:0]);
 
 
+wire[31:0] onOff; 
+
+assign onOff = SW[0] ? {character_O, character_N, character_space, character_space}:{character_O, character_F, character_F, character_space};  
 //Audio Generation Signal
 //Note that the audio needs signed data - so convert 1 bit to 8 bits signed
 wire [7:0] audio_data = {(~Sample_Clk_Signal),{7{Sample_Clk_Signal}}}; //generate signed sample audio signal
@@ -339,7 +342,7 @@ Generate_LCD_scope_Clk(
 (* keep = 1, preserve = 1 *) logic ScopeChannelASignal;
 (* keep = 1, preserve = 1 *) logic ScopeChannelBSignal;
 
-assign ScopeChannelASignal = SW[1];
+assign ScopeChannelASignal = SW[0];
 assign ScopeChannelBSignal = Sample_Clk_Signal;
 
 scope_capture LCD_scope_channelA(
@@ -369,23 +372,23 @@ LCD_Scope_Encapsulated_pacoblaze_wrapper LCD_LED_scope(
                           
                         //LCD Display values
                       .InH({Switch1,Switch2}),
-                      .InG({Switch3,Freq3}),
-                      .InF({Freq2, Freq1}),
-                       .InE({Freq0,4'h0}),
+                      .InG({Switch3,4'h0}),
+                      .InF({Freq3, Freq2}),
+                       .InE({Freq1,Freq0}),
                       .InD(8'h00),
                       .InC(8'h00),
                       .InB(8'h00),
                      .InA(8'h00),
                           
                      //LCD display information signals
-                         .InfoH({character_H,character_E}),
+                         .InfoH({character_F,character_U}),
                           .InfoG({character_L,character_L}),
-                          .InfoF({character_O,character_comma}),
-                          .InfoE({character_space,character_C}),
-                          .InfoD({character_P,character_E}),
-                          .InfoC({character_N,character_space}),
-                          .InfoB({character_G,character_U}),
-                          .InfoA({character_Y,character_S}),
+                          .InfoF({character_space,character_M}),
+                          .InfoE({character_A,character_R}),
+                          .InfoD({character_K,character_S}),
+                          .InfoC({character_space,character_P}),
+                          .InfoB({character_L,character_Z}),
+                          .InfoA({character_space,character_space}),
                           
                   //choose to display the values or the oscilloscope
                           .choose_scope_or_LCD(choose_LCD_or_SCOPE),
@@ -395,7 +398,7 @@ LCD_Scope_Encapsulated_pacoblaze_wrapper LCD_LED_scope(
                           .scope_channelB(scope_channelB), //don't touch
                           
                   //scope information generation
-                          .ScopeInfoA({character_1,character_K,character_H,character_lowercase_z}),
+                          .ScopeInfoA(onOff),
 								  //modified to diplay different notes
                           .ScopeInfoB(note),
                           
